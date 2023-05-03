@@ -1,0 +1,52 @@
+{
+    "root": true,
+    "extends": ["airbnb", "airbnb/hooks", "prettier", "prettier/react"],
+    "parserOptions": {
+        "ecmaVersion": 2020
+    },
+    "rules": {
+        "react/jsx-props-no-spreading": "off",
+        "no-nested-ternary": "off",
+        "no-restricted-syntax": "off",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".js", ".jsx"]
+            }
+        ],
+        "jsx-a11y/label-has-for": [
+            1,
+            {
+                "required": {
+                    "every": ["id"]
+                }
+            }
+        ],
+        "no-extraneous-dependencies": "off",
+        "no-restricted-globals": ["error", "event", "fdescribe"],
+        "jsx-a11y/label-has-associated-control": [
+            2,
+            {
+                "labelComponents": ["CustomInputLabel"],
+                "labelAttributes": ["label"],
+                "controlComponents": ["CustomInput"],
+                "depth": 3
+            }
+        ],
+        "no-param-reassign": 0
+        // "react/forbid-prop-types": [
+        //   "error",
+        //   {
+        //     "forbid": [
+        //       "object",
+        //       "string"
+        //     ]
+        //   }
+        // ]
+    },
+
+    "env": {
+        "browser": true,
+        "node": true
+    }
+}
